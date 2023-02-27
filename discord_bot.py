@@ -97,8 +97,9 @@ async def mai(ctx):
                 cooldown_sent.discard(user_id)
                 temp = await ctx.reply(f"Processing command by {author.mention}...")
                 obj = Replicate_API(query)
-                url = obj.get_result()[0]
+                url = obj.get_result()
                 print("Got result")
+                print(url)
                 obj_watermark= Water_Mark(url)
                 obj_watermark.get_result()
                 print("Image saved")
@@ -136,7 +137,7 @@ async def mai(ctx):
                 cooldown_sent.discard(user_id)
                 temp = await ctx.reply(f"Processing command by {author.mention}...")
                 obj = Replicate_API(query)
-                url = obj.get_result()[0]
+                url = obj.get_result()
                 print("Got result")
                 obj_watermark= Water_Mark(url)
                 obj_watermark.get_result()

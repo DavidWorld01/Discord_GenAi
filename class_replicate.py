@@ -48,4 +48,5 @@ class Replicate_API:
        
         output = self.version.predict(**inputs)
         print('Image generated from prompt!')
+        print(output[0])
         return output[0]
